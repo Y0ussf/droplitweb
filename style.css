@@ -1,0 +1,748 @@
+/* style.css */
+
+@font-face {
+  font-family: "San Francisco Pro Display Light";
+  src: url("./static/font/SF-Pro-Display-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Heavy";
+  src: url("./static/font/SF-Pro-Display-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Bold";
+  src: url("./static/font/SF-Pro-Display-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Black";
+  src: url("./static/font/SF-Pro-Display-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Regular";
+  src: url("./static/font/SF-Pro-Display-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Albra Text Regular";
+  src: url("./static/font/albra-text-regular.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-family: "San Francisco Pro Display Light", sans-serif;
+}
+.menu li {
+  margin-left: 20px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details p {
+  margin-left: 40px;
+}
+
+.toggle:hover {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.sublink {
+  color: gray;
+  text-decoration: none;
+  font-family: "San Francisco Pro Display Light", sans-serif;
+}
+
+.sublink:hover {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.droplit-icon {
+  font-family: "San Francisco Pro Display Bold", sans-serif;
+  font-size: 30px;
+  display: flex;
+  text-align: left;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.title {
+  font-family: "San Francisco Pro Display Heavy", sans-serif;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-top: 20px;
+  animation: fadeInUpBlur 4s ease-out;
+}
+
+@keyframes fadeInUpBlur {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(1px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.subtitle {
+  font-family: "San Francisco Pro Display Light", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 2%;
+  line-height: 1.5;
+}
+
+.article {
+  font-family: "Goudy Old Style", serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.SF-light {
+  font-family: "San Francisco Pro Display Light", sans-serif;
+  font-size: 18px;
+}
+
+.black-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "SF Regular", sans-serif;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.black-button:hover {
+  opacity: 0.8;
+}
+
+.text-button-container {
+  line-height: 0.8;
+}
+
+.highlight {
+  background: linear-gradient(
+      104deg,
+      rgba(130, 255, 173, 0) 0.9%,
+      rgba(130, 255, 173, 1.25) 2.4%,
+      rgba(130, 255, 173, 0.5) 5.8%,
+      rgba(130, 255, 173, 0.1) 93%,
+      rgba(130, 255, 173, 0.7) 96%,
+      rgba(130, 255, 1732, 0) 98%
+    ),
+    linear-gradient(
+      183deg,
+      rgba(130, 255, 173, 0) 0%,
+      rgba(130, 255, 173, 0.3) 7.9%,
+      rgba(130, 255, 173, 0) 15%
+    );
+  padding: 4px 10px;
+  margin: 0;
+  background-size: 0% 100%;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.highlight-animation {
+  animation: highlightAnimation 1s forwards;
+}
+
+@keyframes highlightAnimation {
+  from {
+    background-size: 0% 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes shrink {
+  from {
+    width: 700px;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+.rounded-corners {
+  border-radius: 20px;
+}
+
+#animatedImage {
+  animation-name: shrink;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+  display: block;
+  margin: auto;
+  animation: shrink 2s forwards;
+}
+
+@keyframes shadowAppear {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.shadow-effect {
+  animation: shadowAppear 1s forwards;
+}
+
+.image-caption {
+  font-family: "San Francisco Pro Display Regular", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-top: -1%;
+  animation: fadeInDown 5s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.appDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bodyDescription {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if you need */
+  height: 100%; /* Set a height if you want vertical centering */
+}
+
+.black-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-family: "SF Regular", sans-serif;
+  cursor: pointer;
+  border-radius: 50px;
+  /* Initial state: invisible */
+  opacity: 0;
+  /* Animation */
+  animation: fadeIn 2s ease-out 2s forwards;
+}
+
+/* Define the fading animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content-container {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.black-button {
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease-out 1s forwards;
+}
+
+.images-full-width {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  white-space: nowrap;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.images-container {
+  text-align: center;
+  overflow: hidden;
+}
+
+.app-image {
+  width: 25%;
+  height: auto;
+  transition: transform 1.5s ease;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 150px;
+  position: relative;
+  top: 10px;
+  bottom: 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards;
+}
+
+.features {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.heavy-headline {
+  font-family: "San Francisco Pro Display Bold", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.heavy-subheadline {
+  font-family: "San Francisco Pro Display Bold", sans-serif;
+  font-size: 60px;
+  color: rgb(147, 255, 183);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.spacer {
+  margin-top: 6em;
+}
+
+.medium-spacer {
+  margin-top: 10em;
+}
+.spacer-small {
+  margin-top: 5px;
+}
+
+.big-spacer {
+  margin-top: 15em;
+}
+
+.extrabig-spacer {
+  margin-top: 25em;
+}
+
+.book-full-width {
+  width: 110vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  display: flex;
+  animation: slideLeft 300s linear infinite;
+}
+
+.book-full-width:hover {
+  animation-play-state: paused;
+}
+
+.books-container {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.book-image {
+  width: 28%;
+  height: auto;
+  transition: transform 0.3s ease, z-index 0s;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  top: 20px;
+  bottom: 10px;
+  border-radius: 30px;
+}
+
+.book-image:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  opacity: 80%;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+keys {
+  cursor: default;
+}
+
+.keys:hover {
+  color: rgb(147, 255, 183);
+  cursor: pointer;
+}
+
+.question-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.active .arrow {
+  transform: rotate(180deg);
+}
+
+.answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  font-family: "San Francisco Pro Display Light", sans-serif;
+  font-size: 25px;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  max-height: 100px;
+}
+
+.question {
+  font-family: "San Francisco Pro Display Regular", sans-serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.section-divider {
+  border: 0.8px solid #ccc;
+  width: 100%;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.questionHeadline {
+  font-family: "San Francisco Pro Display Heavy", sans-serif;
+  font-size: 120px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-top: 20px;
+}
+
+.prices-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
+}
+
+.column {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.price-1 {
+  font-family: "San Francisco Pro Display Regular", sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.price-2 {
+  font-family: "San Francisco Pro Display Bold", sans-serif;
+  font-size: 45px;
+  letter-spacing: 1px;
+  color: rgb(147, 255, 183);
+  line-height: 1;
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.price-3 {
+  font-family: "San Francisco Pro Display Light", sans-serif;
+  font-size: 25px;
+  text-align: left;
+  margin-top: 1%;
+  line-height: 1.5;
+}
+
+.white-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "SF Regular", sans-serif;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 5%;
+}
+
+.white-button:hover {
+  opacity: 0.8;
+}
+
+.compareplans-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.overview-container {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
+}
+
+.app-book-cover-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.bookcover-image {
+  width: auto;
+  height: auto;
+  max-width: 20%;
+  opacity: 1;
+  transition: transform 1s, opacity 1s;
+  opacity: 0;
+}
+
+.section {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5%;
+  gap: 5%;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: rgb(104, 104, 104);
+  width: 70%;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
+}
+.audio-button {
+  background-color: white;
+  color: rgb(104, 104, 104);
+  border: 2px solid rgb(104, 104, 104); /* Gray border */
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "SF Regular", sans-serif;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+#summary1 {
+  display: block;
+}
+
+.summary {
+  display: none;
+}
+
+.book-summary {
+  font-family: "Albra Text Regular", serif;
+  font-size: 20px;
+  display: flex;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.booksample-image {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  animation: fadeInUpBlur 4s ease-out;
+  margin-top: 20%;
+}
+
+.buttons-section {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.navigation-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+.devices-container {
+  display: flex;
+  justify-content: center;
+}
+
+.devices-image {
+  width: 50%;
+  height: auto;
+  opacity: 1;
+  animation: fadeInUpBlur 4s ease-out;
+}
