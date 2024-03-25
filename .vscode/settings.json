@@ -1,0 +1,12 @@
+{
+  "workbench.colorCustomizations": {
+    "vscode_custom_css.imports": [
+      "file:///Users/youssef/Documents/Wallpapers/style.css"
+    ],
+    "[Brackets Light Pro]": {},
+    "terminal.foreground": "#bc6718",
+    "terminal.background": "#000000",
+    "minimap.background": "#00000000",
+    "scrollbar.shadow": "#00000000"
+  }
+}
